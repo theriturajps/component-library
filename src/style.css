@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-600 bg-gray-50;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-gray-900 font-semibold;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .accordion-content {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .component-card {
+    @apply bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md hover:border-blue-100 transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white px-3 py-1.5 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm;
+  }
+
+  .search-input {
+    @apply w-full px-4 py-2 pl-10 rounded-lg border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm text-sm;
+  }
+
+  .code-block {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg my-3 relative overflow-x-auto shadow-lg;
+  }
+
+  .code-block pre {
+    @apply font-mono text-xs leading-relaxed;
+  }
+
+  .copy-button {
+    @apply absolute top-2 right-2 bg-gray-800/80 backdrop-blur-sm text-gray-300 px-3 py-1.5 rounded-lg hover:bg-gray-700 transition-colors duration-200 flex items-center text-xs font-medium gap-1.5;
+  }
+}
+
+/* Custom scrollbar */
+.code-block::-webkit-scrollbar {
+  @apply h-1.5 w-1.5;
+}
+
+.code-block::-webkit-scrollbar-track {
+  @apply bg-gray-800 rounded-full;
+}
+
+.code-block::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full hover:bg-gray-500;
+}
